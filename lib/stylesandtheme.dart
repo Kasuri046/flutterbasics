@@ -1,3 +1,4 @@
+import 'package:basicsofflutter/uihelper/textui.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -32,7 +33,9 @@ class MyHomePage extends StatelessWidget {
       ListView(
         children: [
           Text('Welcome to Flutter!',style: Theme.of(context).textTheme.headline1,),
-          Text('Welcome to Flutter!',style: Theme.of(context).textTheme.headline1!.copyWith(color: Colors.green))
+          Text('Welcome to Flutter!',style: Theme.of(context).textTheme.headline1!.copyWith(color: Colors.green)),
+          Text("Hammad",style: mtextstyle2(),), // call from new theme
+
         ],
       )
 
