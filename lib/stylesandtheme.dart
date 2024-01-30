@@ -11,6 +11,9 @@ class MyApp extends StatelessWidget {
       title: 'My Flutter App',
       theme: ThemeData(
         primarySwatch: Colors.green,
+        textTheme: TextTheme(
+          headline1: TextStyle(fontSize: 21,fontWeight: FontWeight.bold),
+        )
       ),
       home: MyHomePage(),
     );
@@ -25,9 +28,14 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Colors.green,
         title: Text('Home Page'),
       ),
-      body: Center(
-        child: Text('Welcome to Flutter!'),
-      ),
+      body:
+      ListView(
+        children: [
+          Text('Welcome to Flutter!',style: Theme.of(context).textTheme.headline1,),
+          Text('Welcome to Flutter!',style: Theme.of(context).textTheme.headline1!.copyWith(color: Colors.green))
+        ],
+      )
+
     );
   }
 }
